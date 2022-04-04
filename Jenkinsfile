@@ -77,7 +77,7 @@ pipeline {
       steps {
 	sshagent(['k8s']) {
           sh "scp -o StrictHostKeyChecking=no zap.sh ubuntu@172.31.94.113:/home/ubuntu"
-          sh "ssh ubuntu@172.31.94.113 bash zap.sh'
+          sh "ssh ubuntu@172.31.94.113 bash zap.sh"
         }
       }
       post {
