@@ -20,7 +20,6 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<log4j2.version>2.17.1</log4j2.version>
-		<jackson-databind.version>2.13.0</jackson-databind.version>
 	</properties>
 
 	<dependencies>
@@ -74,7 +73,7 @@
 			   <version>7.0.1</version>
 			   <configuration>
 			      <format>ALL</format>
-			      <failBuildOnCVSS>8.5</failBuildOnCVSS>
+			      <failBuildOnCVSS>9</failBuildOnCVSS>
 			      <!-- fail the build for CVSS greater than or equal to 5 -->
 			      <!-- 
 						      use internal mirroring of CVE contents 
