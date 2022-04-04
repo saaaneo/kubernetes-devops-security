@@ -75,11 +75,8 @@ pipeline {
 
     stage('OWASP ZAP - DAST') {
       steps {
-	sshagent(['k8s']) {
-          sh "scp -o StrictHostKeyChecking=no zap.sh ubuntu@172.31.94.113:/home/ubuntu"
-          sh "ssh ubuntu@172.31.94.113 bash zap.sh"
+          sh "bash zap.sh"
         }
-      }
       post {
         always {
            publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'owasp-zap-report', reportFiles: 'zap_report.html', reportName: 'OWASP ZAP HTML Report', reportTitles: 'OWASP ZAP HTML Report'])
