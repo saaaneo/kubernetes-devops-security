@@ -42,7 +42,7 @@ public class NumericController {
 			String response = responseEntity.getBody();
 			logger.info("Value Received in Request - " + value);
 			logger.info("Node Service Response - " + response);
-			return long(response);
+			return Integer (response);
 		}
 	}
 
